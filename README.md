@@ -1,4 +1,4 @@
-# GIT SCOPE
+# GIT SCOPE 3.0.0
 Provides a tool window and a status bar widget to select a target branch called **GIT SCOPE**
 
 # Story

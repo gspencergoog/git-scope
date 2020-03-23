@@ -52,7 +52,6 @@ patchPluginXml {
         The entire code structure has been improved.
     """
 }
-//publishPlugin {
-//    token ''
-//    channels 'nightly'
-//}
+publishPlugin {
+    token = intellijPublishToken
+}
