@@ -20,8 +20,8 @@ dependencies {
 //apply plugin: 'org.jetbrains.intellij'
 
 intellij {
-    version 'LATEST-EAP-SNAPSHOT'
-    // version '2019.3.3'
+    // version 'LATEST-EAP-SNAPSHOT'
+    version '2019.3.3'
     plugins 'git4idea'
 }
 

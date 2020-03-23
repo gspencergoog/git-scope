@@ -1,6 +1,6 @@
 # GIT SCOPE 3.0.0
 Provides a tool window and a status bar widget to select a target branch called **GIT SCOPE**
-
+![](docs/01_toolwindow.png)
 # Story
 I guess every developer loves to check their changes before commit using the **Version Control**.
 But there is one big problem after committing code: All changes in the **Version Control** and also the Line Status completely disappear.
@@ -23,6 +23,9 @@ READ: https://www.jetbrains.com/help/phpstorm/file-currentBranch-highlights.html
 Adds a Custom *Scope* (inspections, search/replaces, ect) "Git Scope (Files)", which means search results will be filtered according to **GIT SCOPE**
 
 READ: https://www.jetbrains.com/help/phpstorm/scopes.html
+
+![](docs/02_rollback.png)
+![](docs/03_scope.png)
 
 ## Useful Shortcuts
 | Shortcut | Description |
