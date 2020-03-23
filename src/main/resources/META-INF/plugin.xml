@@ -1,0 +1,54 @@
+<idea-plugin>
+
+    <id>Git Scope</id>
+    <name>Git Scope</name>
+    <description>
+        Provides a tool window and a currentBranch bar widget to select a target branch for custom diffs.
+        Based on your selection, the line currentBranch and a custom scope "Git Scope" adapts.
+    </description>
+    <version>3.0.0</version>
+    <vendor>Michael Wölk</vendor>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="192"/>
+
+    <depends>com.intellij.modules.lang</depends>
+    <depends>Git4Idea</depends>
+
+    <!-- Plugin's application components (On Start IDE) -->
+    <application-components>
+        <component>
+            <implementation-class>system.OnStart</implementation-class>
+        </component>
+    </application-components>
+
+    <!-- Plugin's project components -->
+    <project-components>
+        <component>
+            <!-- OnStart Project (with project payload) -->
+            <implementation-class>system.MyProjectManagerListener</implementation-class>
+        </component>
+    </project-components>
+
+    <extensions defaultExtensionNs="com.intellij">
+
+        <!-- Tool window -->
+<!--        <toolWindow id="Git Scope" secondary="true" anchor="right" factoryClass="myToolWindow.MyToolWindowFactory"/>-->
+        <toolWindow id="Git Scope" secondary="true" anchor="right" factoryClass="ui.ToolWindowUIFactory"/>
+
+        <!-- Config (Persistent) -->
+        <projectService serviceImplementation="state.State"/>
+
+        <projectService serviceImplementation="implementation.Manager" />
+
+        <statusBarWidgetProvider implementation="ui.TargetBranchStatusWidgetProvider"/>
+
+    </extensions>
+
+    <actions>
+        <action id="ToggleHead" class="system.ToggleHeadAction" text="ToggleHead" description="ToggleHead">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="alt H"/>
+        </action>
+    </actions>
+</idea-plugin>

@@ -1,0 +1,58 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '0.4.10'
+}
+
+group 'Git Scope'
+version '3.0.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    // https://mvnrepository.com/artifact/com.intellij/openapi
+}
+
+//apply plugin: 'org.jetbrains.intellij'
+
+intellij {
+    version 'LATEST-EAP-SNAPSHOT'
+    // version '2019.3.3'
+    plugins 'git4idea'
+}
+
+patchPluginXml {
+    sinceBuild '172'
+    untilBuild '999'
+    changeNotes """
+        <h2>Better UI</h2>
+        <ul>
+            <li>New FeatureToggle-Button (Switch between <i>HEAD</i> and <i>Selected Target Branch</i>)
+            <li>TargetBranchWidget-Select
+            <li>Simplified Changes Browser (No useless Checkboxes anymore; onClick opens File, not Diff)
+            <li>New StatusBar
+        </ul>
+        
+        <h2>Work without opened Tool Window</h2>
+        Now it is possible to work without opened Tool Window. You can now use the TargetBranchWidget-Select-Widget on the bottom right
+        
+        <h2>Bugfixes</h2>
+        <ul>
+            <li>
+                #7 "Plugin does not work correctly with multiple Git roots and synchronized branches"
+                If you work with multiple Git roots you can select for each git working direktory different target Branches
+            </li>
+        </ul>
+        
+        <h2>Complete Refactoring</h2>
+        The entire code structure has been improved.
+    """
+}
+//publishPlugin {
+//    token ''
+//    channels 'nightly'
+//}
