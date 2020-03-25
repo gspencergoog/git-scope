@@ -26,8 +26,8 @@ intellij {
 }
 
 patchPluginXml {
-    sinceBuild '172'
-    untilBuild '999'
+    sinceBuild '193'
+    untilBuild '202'
     changeNotes """
         <h2>Better UI</h2>
         <ul>
