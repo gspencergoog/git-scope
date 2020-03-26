@@ -7,7 +7,7 @@
         2. Adapts the Line Status according to your **GIT SCOPE**. Usually this built-in feature shows only the current "HEAD" changes.
         3. Adds a Custom *Scope* (inspections, search/replaces, ect) "Git Scope (Files)", which means search results will be filtered according to **GIT SCOPE**
     </description>
-    <version>3.0.0</version>
+    <version>3.0.1</version>
     <vendor>Michael Wölk</vendor>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
