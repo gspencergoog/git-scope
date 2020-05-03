@@ -16,7 +16,7 @@ Adds a tool window with a change browser (similar to Version Control) which show
 
 Adapts the Line Status according to your **GIT SCOPE**. Usually this built-in feature shows only the current "HEAD" changes
 
-READ: https://www.jetbrains.com/help/phpstorm/file-currentBranch-highlights.html
+READ: https://www.jetbrains.com/help/phpstorm/file-status-highlights.html
 
 **Scope:**
 

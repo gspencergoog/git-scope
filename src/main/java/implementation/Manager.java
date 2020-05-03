@@ -483,9 +483,9 @@ public class Manager {
 
         this.updateToolWindowUI();
 
-        if (!changesAreTheSame) {
+//        if (!changesAreTheSame) {
             this.updateDiff();
-        }
+//        }
         this.updateLst();
         this.updateScope();
 
